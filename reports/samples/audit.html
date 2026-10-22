@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amazon Profit Opportunity Audit</title>
+<style>
+body{font:16px/1.5 system-ui,sans-serif;color:#142b3b;background:#f1f5f8;margin:0}main{max-width:1200px;margin:auto;padding:32px}
+h1,h2{color:#073e53}section,article{background:white;padding:20px;margin:16px 0;border-radius:8px}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:10px;border-bottom:1px solid #d6e1e8}
+.scroll{overflow:auto}.muted{color:#526876}.badge{background:#dfedf4;padding:4px 8px;border-radius:4px}
+</style></head><body><main>
+<h1>Amazon Profit Opportunity Audit</h1>
+<p class="badge">Synthetic demonstration · USD · Deterministic local analysis</p>
+<p>Business: synthetic-demo · Execution: 11e5cee4-061b-43e4-b81c-4ed272c96492<br>
+Period: 2026-09-01 through 2026-09-30 (inclusive)</p>
+<section><h2>Profit overview</h2>
+<p>24 SKUs analyzed; 23 have complete profit inputs.</p>
+<p>Known net sales: $69345.28 (24 SKUs)<br>
+Known gross profit: $48632.49 (23 SKUs)<br>
+Known contribution profit: $14619.39
+(23 SKUs)</p><p>Sum of known SKU values only; partial totals are not whole-business profit.</p>
+<p>Evaluation: PASSED.
+Completeness is disclosed, not assumed. Passing validates workflow integrity, not business viability.</p></section>
+<section><h2>Prioritized opportunities</h2>
+<p>Review rules flag investigation candidates, not promised savings. Profit uplift is unquantified.
+All actions require human review; this report executes no purchases, messages, or account changes.</p>
+<article>
+<h3>P1 · SYN-001 · Review a loss-making SKU</h3>
+<p>Supporting calculations: <code>{"contribution_profit_usd": "-287.39"}</code></p>
+<p>Reconcile costs, then model pricing, fees and ad changes before approval.</p><p class="muted">Confidence: high · Source: deterministic_rule</p>
+</article><article>
+<h3>P1 · SYN-001 · Review replenishment timing (estimate)</h3>
+<p>Supporting calculations: <code>{"estimated_coverage_days": "15.0004", "estimated_reorder_point_units": 28, "inventory_on_hand": 20}</code></p>
+<p>Confirm inbound orders and demand before approving a purchase.</p><p class="muted">Confidence: medium · Source: deterministic_rule</p>
+</article><article>
+<h3>P1 · SYN-007 · Review replenishment timing (estimate)</h3>
+<p>Supporting calculations: <code>{"estimated_coverage_days": "6.3830", "estimated_reorder_point_units": 110, "inventory_on_hand": 20}</code></p>
+<p>Confirm inbound orders and demand before approving a purchase.</p><p class="muted">Confidence: medium · Source: deterministic_rule</p>
+</article><article>
+<h3>P1 · SYN-009 · Review a loss-making SKU</h3>
+<p>Supporting calculations: <code>{"contribution_profit_usd": "-29.67"}</code></p>
+<p>Reconcile costs, then model pricing, fees and ad changes before approval.</p><p class="muted">Confidence: high · Source: deterministic_rule</p>
+</article><article>
+<h3>P1 · SYN-013 · Review replenishment timing (estimate)</h3>
+<p>Supporting calculations: <code>{"estimated_coverage_days": "4.0541", "estimated_reorder_point_units": 104, "inventory_on_hand": 20}</code></p>
+<p>Confirm inbound orders and demand before approving a purchase.</p><p class="muted">Confidence: medium · Source: deterministic_rule</p>
+</article><article>
+<h3>P1 · SYN-016 · Review a loss-making SKU</h3>
+<p>Supporting calculations: <code>{"contribution_profit_usd": "-485.92"}</code></p>
+<p>Reconcile costs, then model pricing, fees and ad changes before approval.</p><p class="muted">Confidence: high · Source: deterministic_rule</p>
+</article><article>
+<h3>P1 · SYN-019 · Review replenishment timing (estimate)</h3>
+<p>Supporting calculations: <code>{"estimated_coverage_days": "2.9703", "estimated_reorder_point_units": 236, "inventory_on_hand": 20}</code></p>
+<p>Confirm inbound orders and demand before approving a purchase.</p><p class="muted">Confidence: medium · Source: deterministic_rule</p>
+</article><article>
+<h3>P1 · SYN-023 · Complete missing inputs before acting</h3>
+<p>Supporting calculations: <code>{"missing_fields": ["cogs"]}</code></p>
+<p>Obtain source records; blanks are never assumed zero.</p><p class="muted">Confidence: high · Source: deterministic_rule</p>
+</article><article>
+<h3>P2 · SYN-001 · Investigate advertising efficiency</h3>
+<p>Supporting calculations: <code>{"acos": "0.7500", "review_threshold": "0.20", "tacos": "0.3191"}</code></p>
+<p>Review search terms and incrementality. High spend alone does not justify cutting ads.</p><p class="muted">Confidence: medium · Source: deterministic_rule</p>
+</article><article>
+<h3>P2 · SYN-005 · Investigate advertising efficiency</h3>
+<p>Supporting calculations: <code>{"acos": "0.7500", "review_threshold": "0.20", "tacos": "0.3191"}</code></p>
+<p>Review search terms and incrementality. High spend alone does not justify cutting ads.</p><p class="muted">Confidence: medium · Source: deterministic_rule</p>
+</article><article>
+<h3>P2 · SYN-008 · Review thin contribution margin</h3>
+<p>Supporting calculations: <code>{"margin": "0.0492", "review_threshold": "0.10"}</code></p>
+<p>Inspect price, discount and cost drivers; validate demand before any price change.</p><p class="muted">Confidence: high · Source: deterministic_rule</p>
+</article><article>
+<h3>P2 · SYN-009 · Investigate advertising efficiency</h3>
+<p>Supporting calculations: <code>{"acos": "0.7500", "review_threshold": "0.20", "tacos": "0.3191"}</code></p>
+<p>Review search terms and incrementality. High spend alone does not justify cutting ads.</p><p class="muted">Confidence: medium · Source: deterministic_rule</p>
+</article><article>
+<h3>P2 · SYN-011 · Review thin contribution margin</h3>
+<p>Supporting calculations: <code>{"margin": "0.0599", "review_threshold": "0.10"}</code></p>
+<p>Inspect price, discount and cost drivers; validate demand before any price change.</p><p class="muted">Confidence: high · Source: deterministic_rule</p>
+</article><article>
+<h3>P2 · SYN-013 · Investigate advertising efficiency</h3>
+<p>Supporting calculations: <code>{"acos": "0.7500", "review_threshold": "0.20", "tacos": "0.3191"}</code></p>
+<p>Review search terms and incrementality. High spend alone does not justify cutting ads.</p><p class="muted">Confidence: medium · Source: deterministic_rule</p>
+</article><article>
+<h3>P2 · SYN-015 · Review thin contribution margin</h3>
+<p>Supporting calculations: <code>{"margin": "0.0501", "review_threshold": "0.10"}</code></p>
+<p>Inspect price, discount and cost drivers; validate demand before any price change.</p><p class="muted">Confidence: high · Source: deterministic_rule</p>
+</article><article>
+<h3>P2 · SYN-017 · Investigate advertising efficiency</h3>
+<p>Supporting calculations: <code>{"acos": "0.7500", "review_threshold": "0.20", "tacos": "0.3191"}</code></p>
+<p>Review search terms and incrementality. High spend alone does not justify cutting ads.</p><p class="muted">Confidence: medium · Source: deterministic_rule</p>
+</article><article>
+<h3>P2 · SYN-017 · Review thin contribution margin</h3>
+<p>Supporting calculations: <code>{"margin": "0.0681", "review_threshold": "0.10"}</code></p>
+<p>Inspect price, discount and cost drivers; validate demand before any price change.</p><p class="muted">Confidence: high · Source: deterministic_rule</p>
+</article><article>
+<h3>P2 · SYN-021 · Investigate advertising efficiency</h3>
+<p>Supporting calculations: <code>{"acos": "0.7500", "review_threshold": "0.20", "tacos": "0.3191"}</code></p>
+<p>Review search terms and incrementality. High spend alone does not justify cutting ads.</p><p class="muted">Confidence: medium · Source: deterministic_rule</p>
+</article><article>
+<h3>P2 · SYN-021 · Review thin contribution margin</h3>
+<p>Supporting calculations: <code>{"margin": "0.0583", "review_threshold": "0.10"}</code></p>
+<p>Inspect price, discount and cost drivers; validate demand before any price change.</p><p class="muted">Confidence: high · Source: deterministic_rule</p>
+</article><article>
+<h3>P2 · SYN-022 · Review thin contribution margin</h3>
+<p>Supporting calculations: <code>{"margin": "0.0506", "review_threshold": "0.10"}</code></p>
+<p>Inspect price, discount and cost drivers; validate demand before any price change.</p><p class="muted">Confidence: high · Source: deterministic_rule</p>
+</article><article>
+<h3>P3 · SYN-002 · Review slow-moving inventory (estimate)</h3>
+<p>Supporting calculations: <code>{"estimated_coverage_days": "153.0643", "review_threshold_days": 120}</code></p>
+<p>Review aged inventory and cash tied up; quantify storage and demand before reallocating capital.</p><p class="muted">Confidence: medium · Source: deterministic_rule</p>
+</article><article>
+<h3>P3 · SYN-003 · Review slow-moving inventory (estimate)</h3>
+<p>Supporting calculations: <code>{"estimated_coverage_days": "134.4851", "review_threshold_days": 120}</code></p>
+<p>Review aged inventory and cash tied up; quantify storage and demand before reallocating capital.</p><p class="muted">Confidence: medium · Source: deterministic_rule</p>
+</article><article>
+<h3>P3 · SYN-004 · Review slow-moving inventory (estimate)</h3>
+<p>Supporting calculations: <code>{"estimated_coverage_days": "120.8973", "review_threshold_days": 120}</code></p>
+<p>Review aged inventory and cash tied up; quantify storage and demand before reallocating capital.</p><p class="muted">Confidence: medium · Source: deterministic_rule</p>
+</article><article>
+<h3>P3 · SYN-008 · Review slow-moving inventory (estimate)</h3>
+<p>Supporting calculations: <code>{"estimated_coverage_days": "436.8974", "review_threshold_days": 120}</code></p>
+<p>Review aged inventory and cash tied up; quantify storage and demand before reallocating capital.</p><p class="muted">Confidence: medium · Source: deterministic_rule</p>
+</article><article>
+<h3>P3 · SYN-015 · Review slow-moving inventory (estimate)</h3>
+<p>Supporting calculations: <code>{"estimated_coverage_days": "271.0860", "review_threshold_days": 120}</code></p>
+<p>Review aged inventory and cash tied up; quantify storage and demand before reallocating capital.</p><p class="muted">Confidence: medium · Source: deterministic_rule</p>
+</article><article>
+<h3>P3 · SYN-022 · Review slow-moving inventory (estimate)</h3>
+<p>Supporting calculations: <code>{"estimated_coverage_days": "196.5074", "review_threshold_days": 120}</code></p>
+<p>Review aged inventory and cash tied up; quantify storage and demand before reallocating capital.</p><p class="muted">Confidence: medium · Source: deterministic_rule</p>
+</article></section>
+<section><h2>SKU profitability</h2><p>Ratios are fractions: 0.20 = 20%. An em dash means unknown or undefined.</p>
+<div class="scroll"><table><thead><tr><th>SKU / product</th><th>Net sales</th><th>Gross profit</th>
+<th>Contribution</th><th>Margin</th><th>ACOS</th><th>TACOS</th><th>Est. cover days</th>
+<th>Est. reorder units</th><th>Risk</th></tr></thead><tbody>
+<tr><td>SYN-001<br>Synthetic Beard Oil</td>
+
+<td>488.43</td>
+<td>102.43</td>
+<td>-287.39</td>
+<td>-0.5884</td>
+<td>0.7500</td>
+<td>0.3191</td>
+<td>15.0004</td>
+<td>28</td><td>at_risk</td></tr><tr><td>SYN-002<br>Synthetic Face Wash</td>
+
+<td>736.50</td>
+<td>528.25</td>
+<td>126.30</td>
+<td>0.1715</td>
+<td>0.3000</td>
+<td>0.1277</td>
+<td>153.0643</td>
+<td>46</td><td>covered</td></tr><tr><td>SYN-003<br>Synthetic Shave Balm</td>
+
+<td>1035.33</td>
+<td>788.83</td>
+<td>266.65</td>
+<td>0.2576</td>
+<td>0.3000</td>
+<td>0.1277</td>
+<td>134.4851</td>
+<td>68</td><td>covered</td></tr><tr><td>SYN-004<br>Synthetic Hair Clay</td>
+
+<td>1384.93</td>
+<td>1100.18</td>
+<td>443.18</td>
+<td>0.3200</td>
+<td>0.3000</td>
+<td>0.1277</td>
+<td>120.8973</td>
+<td>94</td><td>covered</td></tr><tr><td>SYN-005<br>Synthetic Body Wash</td>
+
+<td>1785.29</td>
+<td>1462.29</td>
+<td>314.03</td>
+<td>0.1759</td>
+<td>0.7500</td>
+<td>0.3191</td>
+<td>110.5278</td>
+<td>54</td><td>covered</td></tr><tr><td>SYN-006<br>Synthetic Beard Comb</td>
+
+<td>2236.40</td>
+<td>1416.15</td>
+<td>445.78</td>
+<td>0.1993</td>
+<td>0.3000</td>
+<td>0.1277</td>
+<td>102.3541</td>
+<td>80</td><td>covered</td></tr><tr><td>SYN-007<br>Synthetic Scalp Serum</td>
+
+<td>2738.28</td>
+<td>2338.78</td>
+<td>1189.85</td>
+<td>0.4345</td>
+<td>0.3000</td>
+<td>0.1277</td>
+<td>6.3830</td>
+<td>110</td><td>at_risk</td></tr><tr><td>SYN-008<br>Synthetic Lip Balm</td>
+
+<td>1257.69</td>
+<td>819.94</td>
+<td>61.88</td>
+<td>0.0492</td>
+<td>0.3000</td>
+<td>0.1277</td>
+<td>436.8974</td>
+<td>145</td><td>covered</td></tr><tr><td>SYN-009<br>Synthetic Hand Cream</td>
+
+<td>1683.42</td>
+<td>1207.42</td>
+<td>-29.67</td>
+<td>-0.0176</td>
+<td>0.7500</td>
+<td>0.3191</td>
+<td>85.7151</td>
+<td>79</td><td>covered</td></tr><tr><td>SYN-010<br>Synthetic Shave Brush</td>
+
+<td>2159.92</td>
+<td>1645.67</td>
+<td>559.67</td>
+<td>0.2591</td>
+<td>0.3000</td>
+<td>0.1277</td>
+<td>81.8189</td>
+<td>113</td><td>covered</td></tr><tr><td>SYN-011<br>Synthetic Hair Wax</td>
+
+<td>2687.18</td>
+<td>1432.68</td>
+<td>160.84</td>
+<td>0.0599</td>
+<td>0.3000</td>
+<td>0.1277</td>
+<td>78.4621</td>
+<td>152</td><td>covered</td></tr><tr><td>SYN-012<br>Synthetic Face Scrub</td>
+
+<td>3265.20</td>
+<td>2674.45</td>
+<td>1202.18</td>
+<td>0.3682</td>
+<td>0.3000</td>
+<td>0.1277</td>
+<td>75.5401</td>
+<td>195</td><td>covered</td></tr><tr><td>SYN-013<br>Synthetic Beard Shampoo</td>
+
+<td>3893.97</td>
+<td>3264.97</td>
+<td>832.03</td>
+<td>0.2137</td>
+<td>0.7500</td>
+<td>0.3191</td>
+<td>4.0541</td>
+<td>104</td><td>at_risk</td></tr><tr><td>SYN-014<br>Synthetic Cuticle Oil</td>
+
+<td>4573.50</td>
+<td>3906.25</td>
+<td>1989.39</td>
+<td>0.4350</td>
+<td>0.3000</td>
+<td>0.1277</td>
+<td>70.7011</td>
+<td>147</td><td>covered</td></tr><tr><td>SYN-015<br>Synthetic Moisturizer</td>
+
+<td>2026.96</td>
+<td>1321.46</td>
+<td>101.65</td>
+<td>0.0501</td>
+<td>0.3000</td>
+<td>0.1277</td>
+<td>271.0860</td>
+<td>194</td><td>covered</td></tr><tr><td>SYN-016<br>Synthetic Grooming Kit</td>
+
+<td>2630.36</td>
+<td>941.61</td>
+<td>-485.92</td>
+<td>-0.1847</td>
+<td>0.3000</td>
+<td>0.1277</td>
+<td>66.8575</td>
+<td>245</td><td>covered</td></tr><tr><td>SYN-017<br>Synthetic Soap Bar</td>
+
+<td>3284.51</td>
+<td>2502.51</td>
+<td>223.74</td>
+<td>0.0681</td>
+<td>0.7500</td>
+<td>0.3191</td>
+<td>65.2177</td>
+<td>129</td><td>covered</td></tr><tr><td>SYN-018<br>Synthetic Hair Tonic</td>
+
+<td>3989.43</td>
+<td>3169.18</td>
+<td>1282.48</td>
+<td>0.3215</td>
+<td>0.3000</td>
+<td>0.1277</td>
+<td>63.7309</td>
+<td>181</td><td>covered</td></tr><tr><td>SYN-019<br>Synthetic Foot Cream</td>
+
+<td>4745.10</td>
+<td>3886.60</td>
+<td>1748.44</td>
+<td>0.3685</td>
+<td>0.3000</td>
+<td>0.1277</td>
+<td>2.9703</td>
+<td>236</td><td>at_risk</td></tr><tr><td>SYN-020<br>Synthetic Travel Balm</td>
+
+<td>5551.53</td>
+<td>4654.78</td>
+<td>2250.59</td>
+<td>0.4054</td>
+<td>0.3000</td>
+<td>0.1277</td>
+<td>61.1377</td>
+<td>296</td><td>covered</td></tr><tr><td>SYN-021<br>Synthetic Shave Soap</td>
+
+<td>6408.73</td>
+<td>4285.73</td>
+<td>373.72</td>
+<td>0.0583</td>
+<td>0.7500</td>
+<td>0.3191</td>
+<td>60.0003</td>
+<td>154</td><td>covered</td></tr><tr><td>SYN-022<br>Synthetic Beard Butter</td>
+
+<td>2796.23</td>
+<td>1822.98</td>
+<td>141.40</td>
+<td>0.0506</td>
+<td>0.3000</td>
+<td>0.1277</td>
+<td>196.5074</td>
+<td>214</td><td>covered</td></tr><tr><td>SYN-023<br>Synthetic Body Lotion</td>
+
+<td>3577.29</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>0.3000</td>
+<td>0.1277</td>
+<td>57.9834</td>
+<td>278</td><td>covered</td></tr><tr><td>SYN-024<br>Synthetic Hair Paste</td>
+
+<td>4409.10</td>
+<td>3359.35</td>
+<td>1708.57</td>
+<td>0.3875</td>
+<td>—</td>
+<td>0.0000</td>
+<td>—</td>
+<td>0</td><td>no_observed_demand</td></tr>
+</tbody></table></div></section>
+<section><h2>Assumptions and limitations</h2><ul><li>Sprint 1 demonstration: synthetic normalized USD inputs only; not a native Amazon export adapter.</li><li>All costs, discounts, refunds and attributed sales are period totals; selling price is per unit. COGS excludes separately supplied shipping and inbound freight. Fulfillment fees exclude those inputs.</li><li>Net sales = units × selling price − discounts − refunds. Gross profit = net sales − COGS − shipping − inbound freight.</li><li>Contribution profit = gross profit − referral fees − fulfillment fees − storage fees − advertising spend. Contribution margin = contribution profit / net sales. This is not accounting net income.</li><li>ACOS = advertising spend / advertising-attributed sales; TACOS = advertising spend / net sales. Attributed sales overlap total sales and are NEVER added to revenue. Match attribution windows before use.</li><li>Coverage estimate = inventory / supplied historical daily sales velocity. Reorder estimate = ceil(velocity × lead time); at risk when inventory ≤ reorder estimate and velocity &gt; 0. Estimates assume stable demand and lead time, no inbound inventory or safety stock; medium confidence when inputs exist. Zero velocity means undefined coverage and no observed demand, not infinite coverage.</li><li>Missing inputs stay null and propagate to dependent calculations; actual zeros stay zero. Ratios with nonpositive denominators are undefined (null). Money is rounded half up to cents; ratios/coverage to four decimals. Totals sum displayed SKU values.</li><li>Heuristic review thresholds: margin &lt;10%, TACOS &gt;20%, coverage &gt;120 days. They are investigation triggers, not universal targets. No competitor financial metrics are inferred.</li><li>Storage fees are observed inputs; inventory carrying cost, capital cost, price elasticity, incremental ad returns and profit uplift are not estimated without additional evidence.</li><li>Local deterministic execution has $0.00 estimated external API cost; compute and human labor are excluded.</li></ul>
+<h2>Workflow improvement proposals</h2>
+<p><strong>Validate the audit with one seller interview</strong> — Synthetic output cannot establish willingness to pay for the $79 hypothesis. Prepare a sample audit and an interview plan for founder approval; send nothing automatically. (proposed; approval required.)</p>
+
+<p><strong>Improve source-data completeness</strong> — 1 SKUs have missing inputs. Design an import mapping and completeness checklist; obtain approval before code changes. (proposed; approval required.)</p>
+
+<p><strong>Calibrate inventory assumptions</strong> — Current coverage estimates omit uncertainty and inbound purchase orders. Propose historical backtests and safety-stock inputs before changing replenishment rules. (proposed; approval required.)</p>
+</section></main></body></html>

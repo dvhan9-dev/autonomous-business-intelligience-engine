@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amazon Profit Opportunity Audit</title>
+<style>
+body{font:16px/1.5 system-ui,sans-serif;color:#142b3b;background:#f1f5f8;margin:0}main{max-width:1200px;margin:auto;padding:32px}
+h1,h2{color:#073e53}section,article{background:white;padding:20px;margin:16px 0;border-radius:8px}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:10px;border-bottom:1px solid #d6e1e8}
+.scroll{overflow:auto}.muted{color:#526876}.badge{background:#dfedf4;padding:4px 8px;border-radius:4px}
+</style></head><body><main>
+<h1>Amazon Profit Opportunity Audit</h1>
+<p class="badge">Synthetic demonstration · USD · Deterministic local analysis</p>
+<p>Business: {{ audit.business_id }} · Execution: {{ audit.run_id }}<br>
+Period: {{ audit.period.start }} through {{ audit.period.end }} (inclusive)</p>
+<section><h2>Profit overview</h2>
+<p>{{ audit.summary.sku_count }} SKUs analyzed; {{ audit.summary.complete_profitability_skus }} have complete profit inputs.</p>
+<p>Known net sales: ${{ audit.summary.net_sales or 'Unknown' }} ({{ audit.summary.net_sales_known_skus }} SKUs)<br>
+Known gross profit: ${{ audit.summary.gross_profit or 'Unknown' }} ({{ audit.summary.gross_profit_known_skus }} SKUs)<br>
+Known contribution profit: ${{ audit.summary.contribution_profit or 'Unknown' }}
+({{ audit.summary.contribution_profit_known_skus }} SKUs)</p><p>{{ audit.summary.totals_policy }}</p>
+<p>Evaluation: {{ 'PASSED' if audit.evaluation.passed else 'FAILED' }}.
+{{ audit.evaluation.notes | join(' ') }}</p></section>
+<section><h2>Prioritized opportunities</h2>
+<p>Review rules flag investigation candidates, not promised savings. Profit uplift is unquantified.
+All actions require human review; this report executes no purchases, messages, or account changes.</p>
+{% for o in audit.opportunities %}<article>
+<h3>P{{ o.priority }} · {{ o.sku }} · {{ o.title }}</h3>
+<p>Supporting calculations: <code>{{ o.evidence | tojson }}</code></p>
+<p>{{ o.suggested_action }}</p><p class="muted">Confidence: {{ o.confidence }} · Source: {{ o.origin }}</p>
+</article>{% else %}<p>No configured review rules triggered.</p>{% endfor %}</section>
+<section><h2>SKU profitability</h2><p>Ratios are fractions: 0.20 = 20%. An em dash means unknown or undefined.</p>
+<div class="scroll"><table><thead><tr><th>SKU / product</th><th>Net sales</th><th>Gross profit</th>
+<th>Contribution</th><th>Margin</th><th>ACOS</th><th>TACOS</th><th>Est. cover days</th>
+<th>Est. reorder units</th><th>Risk</th></tr></thead><tbody>
+{% for p in audit.products %}<tr><td>{{ p.sku }}<br>{{ p.product_name }}</td>
+{% for k in ['net_sales','gross_profit','contribution_profit','contribution_margin','acos','tacos',
+'estimated_inventory_coverage_days','estimated_reorder_point_units'] %}
+<td>{{ p[k] if p[k] is not none else '—' }}</td>{% endfor %}<td>{{ p.stockout_risk }}</td></tr>{% endfor %}
+</tbody></table></div></section>
+<section><h2>Assumptions and limitations</h2><ul>{% for note in audit.assumptions %}<li>{{ note }}</li>{% endfor %}</ul>
+<h2>Workflow improvement proposals</h2>{% for p in audit.improvement_proposals %}
+<p><strong>{{ p.title }}</strong> — {{ p.rationale }} {{ p.proposed_action }} ({{ p.status }}; approval required.)</p>
+{% endfor %}</section></main></body></html>

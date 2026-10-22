@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "autonomous-entrepreneur"
+version = "0.1.0"
+description = "Local entrepreneur platform and Amazon FBA profit audit proof of concept"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.115,<1", "uvicorn>=0.34,<1", "pydantic>=2.10,<3",
+  "sqlalchemy>=2.0,<3", "pandas>=2.2,<3", "jinja2>=3.1.6,<4", "python-multipart>=0.0.20,<1"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3,<10", "httpx>=0.28,<1", "ruff>=0.11,<1"]
+
+[project.scripts]
+entrepreneur = "amazon_audit.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/platform_core", "src/amazon_audit", "src/api"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 110
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
